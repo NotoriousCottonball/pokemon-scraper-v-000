@@ -14,7 +14,7 @@ attr_accessor :id, :name, :type, :db, :hp
   end
   def self.find(id, db)
     pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", row_id)
-    self.new ({id: id, name: pokemon_from_db })
+    self.new ({id: id, name: pokemon_from_db[] })
         
       )
     end
