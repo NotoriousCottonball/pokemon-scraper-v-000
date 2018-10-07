@@ -13,8 +13,7 @@ attr_accessor :id, :name, :type, :db, :hp
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
   def self.find(id, db)
-    pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
-    binding.pry
+    pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
     self.new ({id: id, name: pokemon_from_db[1], type: pokemon_from_db[2], hp: pokemon_from_db[3], db: db})
   end
    
