@@ -6,7 +6,7 @@ attr_accessor :id, :name, :type, :db, :hp
     @name = db[:name]
     @type = db[:type]
     @db = db[:db]
-    @hp = db[:hp]
+    @hp = 60
   end
    
   def self.save(name, type, db)
