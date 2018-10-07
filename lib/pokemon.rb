@@ -21,7 +21,8 @@ attr_accessor :id, :name, :type, :db, :hp
         pokemon_hash[:type] = row[2],
         pokemon_hash[:hp] = row[3],
         pokemon_hash[:db] = db
-        
+      )
+    end
     
      
   end
