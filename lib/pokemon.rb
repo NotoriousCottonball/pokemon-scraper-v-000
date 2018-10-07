@@ -12,9 +12,9 @@ attr_accessor :id, :name, :type, :db, :hp
   def self.save(name, type, db)
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
-  def self.find(row_id, db)
+  def self.find(id, db)
     pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", row_id)
-    self.new ({id: })
+    self.new ({id: id, name: pokemon_from_db })
         
       )
     end
