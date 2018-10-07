@@ -3,10 +3,10 @@ attr_accessor :id, :name, :type, :db, :hp
    
    def initialize(hash)
     @id = hash[:id]
-    @name = db[:name]
-    @type = db[:type]
-    @db = db[:db]
-    @hp = db[:hp]
+    @name = hash[:name]
+    @type = hash[:type]
+    @db = hash[:db]
+    @hp = hash[:hp]
   end
    
   def self.save(name, type, db)
