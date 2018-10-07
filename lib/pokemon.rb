@@ -14,8 +14,8 @@ attr_accessor :id, :name, :type, :db, :hp
   end
    def self.find(row_id, db)
     pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", row_id)
-    pokemon_hash = {}
     pokemon_from_db.each do |value|
+      
       pokemon_hash[:id] = value[0]
       pokemon_hash[:name] = value[1]
       pokemon_hash[:type] = value[2]
