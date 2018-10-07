@@ -14,7 +14,8 @@ attr_accessor :id, :name, :type, :db, :hp
   end
   def self.find(row_id, db)
     pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", row_id)
-    pokemon_from_db.each do |row|
+    
+    pokemon_from_db.each do |node|
       self.new(
         hash = { 
           id: row[0],
