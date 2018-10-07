@@ -17,11 +17,11 @@ attr_accessor :id, :name, :type, :db, :hp
     pokemon_from_db.each do |row|
       self.new(
         hash = { 
-          id:row[0],
-          [:name] = row[1],
-          [:type] = row[2],
-          [:hp] = row[3],
-          [:db] = db
+          id: row[0],
+          name: row[1],
+          type: row[2],
+          hp: row[3],
+          db: db
         }
       )
     end
