@@ -23,8 +23,6 @@ attr_accessor :id, :name, :type, :db, :hp
         pokemon_hash[:db] = db
       )
     end
-    
-     
   end
    
   def alter_hp(new_hp, db)
